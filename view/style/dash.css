@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+} body{
+    background-color: #E8E8E8;
+} .painel_heading{
+     text-align: left;
+    font-size: 2.4rem;
+    margin-left: 1.7rem;
+    margin-top: 2rem;
+}
+
+.container{
+    display: flex;
+    
+}
+
+.menu-left{
+    height: 100vh;
+    width: 15rem;
+    background-color: rgb(0, 119, 255);
+    position: fixed;
+}.ul_list_left{
+    padding-top: 3rem;
+}
+
+li{
+    padding: 3rem 2rem;
+   
+} .section_center{
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+li > a{
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} .arrow-left{
+    width: 2rem;
+    height: 2rem;
+}
+
+.itens-center-content{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     margin-top: 8rem;
+     
+}.itens-card-content{
+    display: flex;
+}
+
+.itens-card-info{
+    background-color: #ffffff;
+    width: 28rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}.description-card{
+    margin:  0rem 2rem;
+}
+
+.number_card{
+    font-size: 1.8rem;
+     margin-bottom: 0.4rem;
+}.info_text_card{
+    font-size: 1.6rem;
+} .icon_dash{
+    object-fit: contain;
+    margin-left: 2rem;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+} .text_two{
+    color: #5250CC;
+} 
+
+
+.text_three{
+    color: #671EC5;
+}.text_four{
+    color: #319B5C;
+}.text_five{
+     color: #e64a0c;
+}.text_six{
+    color: #f82307;
+}
+.one{
+    background-color: black;
+}
+.two{
+    background-color: #5250CC;
+}
+.three{
+    background-color: #671EC5;
+}
+
+.four{
+   background-color: #319B5C;
+}.five{
+    background-color: #e64a0c;
+}
+.six{
+    background-color: #f82307;
+
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  } .color_invite{
+    display: block;
+    color: #000000;
+    padding: 0.2rem 0.4rem;
+    border-radius: 50%;
+  }

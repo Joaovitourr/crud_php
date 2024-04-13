@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Area Restrita</h1>
+
+    <h2> Bem vindo, <span class="name"> </span></h2>
+
+    <button class="logout"> Desconectar </button>
+    
+</body>
+ 
+<script> 
+
+ let body = document.querySelector("body");
+ body.style.display = "none";
+ 
+ const validateSession = () => {
+   
+//    fetch("controller/validar_login.php")
+fetch("../controller/admin_controller/validar_sessao.php")
+   .then(response => {
+       if(!response.ok){
+           throw new Error("Erro");
+       } 
+       return response.json();
+   }).then(data => {
+
+    console.log(data);
+        
+       if(data.denied){
+           location.href = "../login.html";
+       }else if(data.success){
+           body.style.display = "block";
+           const name = document.querySelector(".name").textContent = data.user;
+           console.log(data.success);
+
+       }
+   })
+ 
+  
+}
+
+validateSession();
+
+
+const btn = document.querySelector(".logout").addEventListener("click", () => {
+
+    fetch("../controller/logout.php").then(response => {
+        if(!response.ok){
+            throw new Error("erro");
+        }
+        
+        return response.json();
+
+    }).then(data => {
+    
+         if(data.destroy){
+         location.href = "../login.html";
+         }
+    })
+
+})
+
+
+</script>
+</html>

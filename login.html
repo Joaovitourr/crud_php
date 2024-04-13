@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+
+*{
+    
+    border: none;
+}input{
+    height: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    border: 1px solid rgb(53, 52, 52);
+    text-align: left;
+    padding-left: 0.4rem;
+    
+    
+}.form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 25rem;
+} .submit{
+    background-color: #17a2da;
+    color: black;
+    height: 3rem;
+    width: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+
+}h1{
+    text-align: center;
+}.info_user{
+    color: red;
+    font-size: 1.2rem;
+    display: block;
+    text-align: left;
+    margin: 0.4rem 0rem 2rem;
+}
+</style>
+<body>
+
+    <h1>
+       Logar
+    </h1>
+
+    <div class="form"> 
+
+        <input type="text" placeholder="Usuario" class="usuario">
+        <input type="text" placeholder="Senha" class="senha">
+
+          <span class="info_user"> </span>
+        <button class="submit" name="btn">Entrar </button>
+
+    </div>
+    
+    <script> 
+
+const validarLogin = async () => {
+    const btn = document.querySelector(".submit");
+    btn.addEventListener("click", async () => {
+        const usuario = document.querySelector(".usuario").value;
+        const senha = document.querySelector(".senha").value;
+        const regex = /[!@#$%^&*()_+{}|:"<>?[\]\;',./\\`~]/;
+
+      
+        const span = document.querySelector(".info_user");
+
+
+        if (usuario === "" || senha === "") {
+            alert("Preencha os campos");
+            return;
+        } 
+        if (regex.test(usuario)) {
+            alert("Usuário inválido");
+            return;
+        }
+
+        let data = {
+            usuario,
+            senha
+        };
+
+    
+            fetch("./controller/validar_login.php", {
+                method: "POST",
+                headers: {
+                    "Content-type": "Application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(response => {
+                if(!response.ok){
+                    throw new Error("Erro")
+                } 
+
+                return response.json();
+                  
+            }).then(data => {
+
+                console.log(data);
+                
+                 if(data.denied){
+                    alert("acesso negado")
+                } else if(data.access){
+                    localStorage.setItem("user", data.user);
+                    location.href = "./view/logado.html";
+                } else if(data.block){
+                 
+                    span.textContent = data.block;
+                }
+            })
+    })
+};
+
+validarLogin();
+
+    
+    </script>
+</body>
+</html>

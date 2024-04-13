@@ -1,0 +1,145 @@
+h1{
+    text-align: center;
+}
+
+.usuario_nome{
+    color: green;
+   
+} .users_crud{
+   width: 20rem;
+    height: 5rem;
+  justify-content: space-between;
+   border-radius: 10px;
+   border: 1px solid red;
+
+
+
+} .users_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 1px solid rgb(22, 22, 22);
+    margin-top: 1rem;
+    padding: 0rem 2rem;
+} .usuario_nome{
+    font-size: 1.6rem;
+}
+
+.user_edit, .user_remove,  .user_status, .user_block{
+     
+    width: 8rem;
+    height: 2.3rem;
+    border-radius: 10px;
+    padding: 0rem 1rem;
+    margin: 0rem 0.5rem;
+    border: none;
+
+
+} .user_edit{
+    background-color: rgb(11, 143, 184);
+}.user_remove{
+    background-color: red;
+} .user_status{
+    background-color: rgb(212, 16, 196);
+
+  
+
+} .user_free > a {
+    color: #fff;
+}
+
+.admin_info{
+    color: green;
+} .support_contact{
+    color: orange;
+}.support_suspended{
+    color: rgb(0, 0, 0);
+    
+} .admin_info_blocked{
+    color: rgb(17, 99, 221);
+}
+a {
+   
+    width: 12rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+   
+    
+
+} h2{
+    color: #fff;
+}
+
+.admin_box{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    border-radius: 20px;
+    max-width: 20rem;
+    position: fixed;
+    right: 4rem;
+    top: 1rem;
+    padding: 0rem 1rem;
+
+    max-height: 30rem;
+    overflow-y: scroll;
+
+} .admin_nome{
+    font-size: 1.8rem;
+    color: #fff;
+}.admin_content{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn_remover_adm, .btn_editar_adm{
+    background-color: rgb(235, 42, 8);
+    font-size: 1.3rem;
+    margin: 0.4rem 0rem;
+    border: none; 
+    outline: none;;
+    height: 2.3rem;
+    padding: 1rem;
+    border-radius: 10px;
+
+} .btn_editar_adm{
+    background-color: orange;
+}
+
+.btn_remover_adm > a, .btn_editar_adm > a{
+    color: #fff;
+} ul > li{
+    font-size: 1.4rem;
+}
+
+
+.itens{
+    text-align: center;
+ 
+} button{
+    margin-top: 2rem;
+    width: 14rem;
+    height: 2.8rem;
+    background-color: rgb(0, 174, 255);
+    border: none;
+} button > a{
+    color: #fff;
+
+}
+
+.user_block{
+    background-color: rgb(21, 212, 148);
+}

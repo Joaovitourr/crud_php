@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+
+.logar-box{
+    margin: 0 auto;
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+}label{
+    font-size: 1.4rem;
+}
+
+input{
+    width: 20rem;
+    margin: 1rem 0rem;
+   border: 1px solid black;
+   height: 2rem;
+   padding-left: 1rem;
+} button{
+    background-color: rgb(14, 131, 226);
+    height: 3rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+} .info{
+    display: block;
+    color: red;
+    font-size: 1.3rem;
+    margin: 0.4rem 0rem;
+}.page {
+    margin-top: 2rem;
+}.page > a {
+    color: #fff;
+    text-decoration: none;
+}
+ 
+</style>
+<body>
+ 
+
+    <div class="logar-box">
+
+    <h1> Logar </h1>
+
+    <label> Admin</label>
+    <input type="text" class="usuario">
+
+    <label> senha</label>
+    <input type="password" class="password">
+
+    <span class="info"> </span>
+    
+    <button class="logar"> Logar </button>
+    <button class="page"><a href="./cadastro.html"> Pagina Inicial </a> </button>
+
+
+    </div>
+
+    <script>
+
+     const autorizarAdmin = () => {
+
+     
+        const btn = document.querySelector(".logar");
+
+        btn.addEventListener("click", () => {
+
+            const user = document.querySelector(".usuario").value;
+        const senha = document.querySelector(".password").value
+        const span = document.querySelector(".info");
+
+        if(user === "" || senha === ""){
+            alert("Preencha todos os campos");
+            return;
+        }
+
+        let data = {
+            user, 
+            senha
+        }
+
+        console.log(data)
+
+        
+
+       
+       
+
+        fetch("../login/controller/admin_controller/admin_logar.php", { 
+            method: "POST",
+            headers: {
+                "Content-type" : "application/json"
+            },
+            body: JSON.stringify(data)
+        }).then(response => {
+             if(!response.ok){
+                throw new Error("erro")
+             }
+             return response.json();
+        }).then(data => {
+
+            console.log(data);
+               
+            if(data.error){
+                console.log("eror")
+                span.textContent = data.error;
+
+                setTimeout(() => {
+                 span.textContent ="";
+                }, 2000)
+            } else if(data.success){
+                location.href = "./view/dash.php";
+                console.log(data.success);
+            }
+              
+        })
+
+
+        })
+ 
+
+
+     }
+  
+     autorizarAdmin();
+
+
+
+
+    </script>
+    
+</body>
+</html>

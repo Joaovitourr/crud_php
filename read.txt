@@ -1,0 +1,40 @@
+Este projeto é um CRUD que apresenta um painel com diversos dados.
+
+Existem 3 níveis de administradores:
+
+Admin Comum - Não possui acesso a nenhum dado na dashboard. É necessário um nível 
+superior para visualizar os dados. Esse tipo de administrador tem um formulário
+para solicitar um aumento de nível.
+
+Admin Intermediário - Este tipo de administrador tem acesso a alguns dados 
+na dashboard, como o número de usuários cadastrados e o número de usuários online.
+Também pode adicionar outro administrador (apenas até o nível 2).
+
+Admin Supremo - Como o nome sugere, o admin supremo tem acesso a todos os 
+dados e mais. Ele pode visualizar todos os administradores, todos os usuários, 
+além de ter o poder de bloquear administradores, excluir ou bloquear usuários e
+alterar os dados dos usuários. O admin supremo é responsável por receber as 
+solicitações de aumento de nível dos administradores comuns e também tem o poder
+de cadastrar administradores de nível 3.
+
+---------------------------------------------------------------
+
+ENGLISH 
+
+This project is a CRUD system featuring a dashboard with various data.
+
+There are 3 levels of administrators:
+
+Common Admin - Has no access to any data on the dashboard. A higher level is 
+required to view the data. This type of administrator has a form to request a 
+level increase.
+
+Intermediate Admin - This type of administrator has access to some data on the
+ dashboard, such as the number of registered users and the number of users online.
+ They can also add another administrator (up to level 2 only).
+
+Supreme Admin - As the name suggests, the supreme admin has access to all data 
+and more. They can view all administrators, all users, as well as have the power 
+to block administrators, delete or block users, and also alter user data. The supreme
+admin is responsible for receiving level increase requests from common
+administrators and also has the power to register level 3 administrators.

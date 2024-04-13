@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;   
+
+   } .container_lista{
+       margin: 0 auto;
+   }.container_content{
+    max-width: 60rem;
+    margin: 0 auto;
+    
+   }h1{
+    text-align: center;
+   }
+   
+   .user_name{
+    font-size: 1.8rem;
+   }.container_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(37, 37, 37);
+    background-color: black;
+    margin: 1rem 0rem;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    color: #fff;
+   } .user_nivel, .user_block, .user_status{ 
+        font-size: 1.6rem;
+   }

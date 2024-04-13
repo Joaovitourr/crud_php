@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;   
+    border: none;
+
+   } .container_solicitacao{
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    
+
+   } .content_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+   } .infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 30rem;
+   }
+   
+   .admin_nome, .admin_nivel, .admin_mensagem{ 
+    font-size: 1.4rem; 
+    font-family: sans-serif;
+    margin-top: 0.3rem;
+   } button{ 
+    width: 10rem;
+    height: 2.3rem;
+    border-radius: 10px;
+   } button > a {
+    color: #fff;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   } .btn_aceitar{
+    background-color: rgb(26, 68, 7);
+   }.btn_negar{
+    background-color: red;
+   }
